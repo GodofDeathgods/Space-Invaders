@@ -14,15 +14,18 @@ namespace Space_Invaders
     {
         private TimeSpan time;
 
+
+        
+
         private void countup_Tick(object sender, EventArgs e)
         {
             time = time.Add(TimeSpan.FromSeconds(1));
             timer.Text = time.ToString(@"mm\:ss");
         }
-        private void TickTimer(object sender, EventArgs e)
+        private void help(object sender, EventArgs e)
         {
             time = new TimeSpan(00, 00, 00);
-            timer.Text = time.ToString(@"mm\:ss"); 
+            timer.Text = time.ToString(@"mm\:ss");
             countup.Start();
         }
     }
