@@ -42,7 +42,14 @@ namespace Space_Invaders
 
             Shuttle = new Bitmap(Resources.Lvl1_Raumschiff_1);//Setzt aus suche, codesuche, Resources.resx shuttle ein
 
-            
+            Label timer = new Label();
+            timer.Text = "00:00";
+            timer.Location = new System.Drawing.Point(0, 0);
+            timer.BringToFront();
+            timer.Visible = true;
+            timer.ForeColor = Color.White;
+            this.Controls.Add(timer);
+
         }
 
         private void Form1_Load(object sender, EventArgs e)

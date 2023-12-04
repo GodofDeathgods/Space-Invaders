@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.MoveBgTimer = new System.Windows.Forms.Timer(this.components);
             this.MovePlayer = new System.Windows.Forms.Timer(this.components);
+            this.countup = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // MoveBgTimer
@@ -44,6 +45,10 @@
             this.MovePlayer.Enabled = true;
             this.MovePlayer.Interval = 20;
             this.MovePlayer.Tick += new System.EventHandler(this.TimerEvent);
+            // 
+            // countup
+            // 
+            this.countup.Interval = 1000;
             // 
             // Form1
             // 
@@ -67,6 +72,7 @@
 
         private System.Windows.Forms.Timer MoveBgTimer;
         private System.Windows.Forms.Timer MovePlayer;
+        private System.Windows.Forms.Timer countup;
     }
 }
 
