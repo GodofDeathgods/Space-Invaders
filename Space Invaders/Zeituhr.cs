@@ -1,27 +1,29 @@
-﻿using System;
+﻿using Space_Invaders.Properties;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace Space_Invaders
 {
-
-
-    Form1 label = new Form1();
-
-    private TimeSpan time;
-
-    private void timer1_Tick(object sender, EventArgs e)
+    public partial class Form1 : Form
     {
-        time = time.Add(TimeSpan.FromSeconds(1));
-        timer.Text = time.ToString(@"mm\:ss");
-    }
-    private void TickTimer(object sender, EventArgs e)
-    {
-        time = new TimeSpan(00, 00, 00);
-        timer.Text = time.ToString(@"mm\:ss");
-        countup.Start();
+        private TimeSpan time;
+
+        private void countup_Tick(object sender, EventArgs e)
+        {
+            time = time.Add(TimeSpan.FromSeconds(1));
+            timer.Text = time.ToString(@"mm\:ss");
+        }
+        private void TickTimer(object sender, EventArgs e)
+        {
+            time = new TimeSpan(00, 00, 00);
+            timer.Text = time.ToString(@"mm\:ss"); 
+            countup.Start();
+        }
     }
 }

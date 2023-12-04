@@ -32,6 +32,7 @@
             this.MoveBgTimer = new System.Windows.Forms.Timer(this.components);
             this.MovePlayer = new System.Windows.Forms.Timer(this.components);
             this.countup = new System.Windows.Forms.Timer(this.components);
+            this.timer = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // MoveBgTimer
@@ -48,7 +49,18 @@
             // 
             // countup
             // 
+            this.countup.Enabled = true;
             this.countup.Interval = 1000;
+            // 
+            // timer
+            // 
+            this.timer.AutoSize = true;
+            this.timer.BackColor = System.Drawing.Color.Silver;
+            this.timer.Location = new System.Drawing.Point(86, 72);
+            this.timer.Name = "timer";
+            this.timer.Size = new System.Drawing.Size(35, 13);
+            this.timer.TabIndex = 0;
+            this.timer.Text = "label1";
             // 
             // Form1
             // 
@@ -56,6 +68,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(784, 661);
+            this.Controls.Add(this.timer);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
@@ -65,6 +78,7 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -73,6 +87,7 @@
         private System.Windows.Forms.Timer MoveBgTimer;
         private System.Windows.Forms.Timer MovePlayer;
         private System.Windows.Forms.Timer countup;
+        private System.Windows.Forms.Label timer;
     }
 }
 

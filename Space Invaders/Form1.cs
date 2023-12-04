@@ -16,7 +16,6 @@ namespace Space_Invaders
         PictureBox[] stars;
         int backgroundspeed;
         Random rnd;
-       
 
         Bitmap Shuttle;
         bool goLeft, goRight;
@@ -42,14 +41,11 @@ namespace Space_Invaders
 
             Shuttle = new Bitmap(Resources.Lvl1_Raumschiff_1);//Setzt aus suche, codesuche, Resources.resx shuttle ein
 
-            Label timer = new Label();
+
             timer.Text = "00:00";
-            timer.Location = new System.Drawing.Point(0, 0);
             timer.BringToFront();
             timer.Visible = true;
-            timer.ForeColor = Color.White;
-            this.Controls.Add(timer);
-
+            timer.ForeColor = Color.Black;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -201,7 +197,6 @@ namespace Space_Invaders
             }
         }
 
-        
 
         private void OnFrameChanged(object o, EventArgs e)
         {
