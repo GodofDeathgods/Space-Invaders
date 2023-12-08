@@ -51,26 +51,27 @@
             // 
             this.countup.Enabled = true;
             this.countup.Interval = 1000;
+            this.countup.Tick += new System.EventHandler(this.countUp);
             // 
             // timer
             // 
             this.timer.AutoSize = true;
             this.timer.BackColor = System.Drawing.Color.Silver;
-            this.timer.Location = new System.Drawing.Point(86, 72);
+            this.timer.Location = new System.Drawing.Point(129, 111);
+            this.timer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.timer.Name = "timer";
-            this.timer.Size = new System.Drawing.Size(35, 13);
+            this.timer.Size = new System.Drawing.Size(51, 20);
             this.timer.TabIndex = 0;
             this.timer.Text = "label1";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(784, 661);
+            this.ClientSize = new System.Drawing.Size(778, 644);
             this.Controls.Add(this.timer);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace Space_Invaders
 {
+    using Res = Space_Invaders.Properties.Resources;
     public partial class Form1 : Form
     {
         PictureBox[] stars;
@@ -35,6 +36,9 @@ namespace Space_Invaders
         List<Bullet> bullets = new List<Bullet>();
         Image bulletImage = Resources.Munition_Blue;//Setzt aus suche, codesuche, Resources.resx Projektil ein
 
+        private int secSincePlay = 0;
+
+
         public Form1()
         {
             InitializeComponent();
@@ -42,10 +46,6 @@ namespace Space_Invaders
             Shuttle = new Bitmap(Resources.Lvl1_Raumschiff_1);//Setzt aus suche, codesuche, Resources.resx shuttle ein
 
 
-            timer.Text = "00:00";
-            timer.BringToFront();
-            timer.Visible = true;
-            timer.ForeColor = Color.Black;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -197,6 +197,11 @@ namespace Space_Invaders
             }
         }
 
+        private void countUp(object sender, EventArgs e)
+        {
+            secSincePlay++;
+            timer.Text = "Zeit: " + Convert.ToString(secSincePlay);
+        }
 
         private void OnFrameChanged(object o, EventArgs e)
         {
